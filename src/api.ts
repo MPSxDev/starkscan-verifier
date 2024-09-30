@@ -4,7 +4,7 @@ import { networkType, SourceCode } from "./types.js";
 function getStarkscanBaseUrl(network: networkType) {
   if (network === "mainnet") {
     return "https://api.starkscan.co/api"
-  } else if (network === "testnet-2") {
+  } else if (network === "-2") {
     return "https://api-sepolia-2.starkscan.co/api"
   }
   return "https://api-sepolia.starkscan.co/api"
