@@ -45,7 +45,7 @@ export async function getClassHash(): Promise<{
   promises.push(
     getHashDetails({
       hash: userInputHash,
-      network: "testnet",
+      network: "sepolia",
     })
   );
   promises.push(
@@ -71,7 +71,7 @@ export async function getClassHash(): Promise<{
     if (hashDetailsTestnet.is_verified) {
       const starkscanUrl = getStarkscanClassUrl({
         classHash: hashDetailsTestnet.class_hash,
-        network: "testnet",
+        network: "sepolia",
       });
       spinner.info(`Already verified on Testnet: ${starkscanUrl}`);
     } else {
@@ -84,7 +84,7 @@ export async function getClassHash(): Promise<{
       }
       choices.push({
         name: "Testnet",
-        value: "testnet",
+        value: "sepolia",
         checked: true,
       });
     }
