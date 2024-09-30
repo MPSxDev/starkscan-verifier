@@ -5,9 +5,9 @@ function getStarkscanBaseUrl(network: networkType) {
   if (network === "mainnet") {
     return "https://api.starkscan.co/api"
   } else if (network === "testnet-2") {
-    return "https://api-testnet-2.starkscan.co/api"
+    return "https://api-sepolia-2.starkscan.co/api"
   }
-  return "https://api-testnet.starkscan.co/api"
+  return "https://api-sepolia.starkscan.co/api"
 }
 
 export function getStarkscanClassUrl({
@@ -22,7 +22,7 @@ export function getStarkscanClassUrl({
   } else if (network === "testnet-2") {
     return `https://testnet-2.starkscan.co/class/${classHash}#code`;
   }
-  return `https://testnet.starkscan.co/class/${classHash}#code`;
+  return `https://sepolia.starkscan.co/class/${classHash}#code`;
 }
 interface HashDetailsRes {
   type: "class" | "contract";
